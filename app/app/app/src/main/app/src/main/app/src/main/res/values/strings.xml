@@ -1,0 +1,5 @@
+<resources>
+  <string name="app_name">MarketPulse</string>
+  <string name="alpha_vantage_key">YOUR_ALPHA_VANTAGE_KEY_HERE</string>
+  <string name="two_hour">Every 2 hours</string>
+</resources>
