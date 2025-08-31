@@ -18,13 +18,14 @@ jobs:
           distribution: temurin
           java-version: "17"
 
+      # Install Android SDK + build-tools 34
       - name: Setup Android SDK
         uses: android-actions/setup-android@v3
         with:
           api-level: 34
           build-tools: "34.0.0"
 
-      # ⬇️ Use the Gradle Build Action to download and run Gradle 8.7
+      # Use official Gradle action (no wrapper required)
       - name: Build Debug APK with Gradle 8.7
         uses: gradle/gradle-build-action@v3
         with:
@@ -54,4 +55,3 @@ jobs:
           files: dist/*.apk
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
